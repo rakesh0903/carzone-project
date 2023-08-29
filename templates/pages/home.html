@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block title %}| Home{% endblock%}
 {% block content %}
   {% load humanize %}
   {% load static %}
@@ -36,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            {% include 'includes/messages.html' %}
             <!-- Search box 3 start -->
             <div class="search-box-4 sb-8">
                 <form action="{% url 'cars:search' %}" method="GET">
